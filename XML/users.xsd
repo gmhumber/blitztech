@@ -1,0 +1,61 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="userId" type="xs:positiveInteger" />
+                            <xs:element name="password" type="xs:string" />
+                            <xs:element name="name">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="firstName" type="xs:string" />
+                                        <xs:element name="lastName" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="address" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="street" type="xs:string" />
+                                        <xs:element name="city" type="xs:string" />
+                                        <xs:element name="province" type="xs:string" />
+                                        <xs:element name="country" type="xs:string" />
+                                        <xs:element name="postalCode" type="postalCode" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="email" type="email" />
+                            <xs:element name="phone" type="phone" minOccurs="0" />
+                            <xs:element name="privilages" type="privilages" />
+                            <xs:element name="userClass" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Custom Data Types -->
+    <xs:simpleType name="postalCode">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z]\d[a-zA-Z]\d[a-zA-Z]\d" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[\w\.\-]+@[\w\.\-]+" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="phone">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\(\d{3}\)\d{3}\-\d{4}" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="privilages">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="user"/>
+            <xs:enumeration value="admin" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

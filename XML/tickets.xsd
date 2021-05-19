@@ -1,0 +1,64 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="tickets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ticket" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ticketId" type="xs:positiveInteger" />
+                            <xs:element name="submitterId" type="xs:positiveInteger" />
+                            <xs:element name="handlerId" type="xs:positiveInteger" />
+                            <xs:element name="category" type="xs:string" />
+                            <xs:element name="status" type="status" default="open" />
+                            <xs:element name="ticketDateTimes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="openedDate" type="xs:dateTime" />
+                                        <xs:element name="resolvedDate" type="xs:dateTime" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="memos">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="memo" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="memoDateTime" type="xs:dateTime" />
+                                                    <xs:element name="authorId" type="xs:positiveInteger" />
+                                                    <xs:element name="note" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="messages">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="message" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="messageDateTime" type="xs:dateTime" />
+                                                    <xs:element name="senderId" type="xs:positiveInteger" />
+                                                    <xs:element name="body" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Custom Data Types -->
+    <xs:simpleType name="status">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="open" />
+            <xs:enumeration value="resolved" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

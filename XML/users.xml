@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="users.xsd">
+<!-- All passwords are Bcrypt hashes of the string: "Test123" -->
+    <user>
+        <userId>1</userId>
+        <password>$2y$10$O6rMQi5Okc1Sq2hZtvtlI.jNo8Tzq.2VEFmUkIUcbTfdOnFHyUNA2</password>
+        <name>
+            <firstName>Chris</firstName>
+            <lastName>Krebs</lastName>
+        </name>
+        <email>ckrebs@blitztech.ca</email>
+        <phone>(416)555-8989</phone>
+        <privilages>admin</privilages>
+        <userClass>support</userClass>
+    </user>
+    <user>
+        <userId>2</userId>
+        <password>$2y$10$O6rMQi5Okc1Sq2hZtvtlI.jNo8Tzq.2VEFmUkIUcbTfdOnFHyUNA2</password>
+        <name>
+            <firstName>Joe</firstName>
+            <lastName>Schmo</lastName>
+        </name>
+        <email>jschmo@gmail.com</email>
+        <privilages>user</privilages>
+        <userClass>customer</userClass>
+    </user>
+    <user>
+        <userId>3</userId>
+        <password>$2y$10$O6rMQi5Okc1Sq2hZtvtlI.jNo8Tzq.2VEFmUkIUcbTfdOnFHyUNA2</password>
+        <name>
+            <firstName>Betty</firstName>
+            <lastName>Boop</lastName>
+        </name>
+        <address>
+            <street>65 Main St.</street>
+            <city>Toronto</city>
+            <province>Ontario</province>
+            <country>Canada</country>
+            <postalCode>M7E0P4</postalCode>
+        </address>
+        <email>bettyb@aol.com</email>
+        <phone>(647)555-4567</phone>
+        <privilages>user</privilages>
+        <userClass>customer</userClass>
+    </user>
+</users>

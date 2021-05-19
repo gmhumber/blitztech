@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="tickets.xsd">
+  <ticket>
+    <ticketId>1</ticketId>
+    <submitterId>2</submitterId>
+    <handlerId>1</handlerId>
+    <category>returns</category>
+    <status>open</status>
+    <ticketDateTimes>
+      <openedDate>2021-01-05T10:41:22</openedDate>
+    </ticketDateTimes>
+    <memos>
+      <memo>
+        <memoDateTime>2021-01-06T03:22:11</memoDateTime>
+        <authorId>1</authorId>
+        <note>File assigned and accepted.</note>
+      </memo>
+      <memo>
+        <memoDateTime>2021-03-12T21:15:55</memoDateTime>
+        <authorId>1</authorId>
+        <note>Bob thinks this could be a software issue. He's still investigating.</note>
+      </memo>
+    </memos>
+    <messages>
+      <message>
+        <messageDateTime>2021-01-05T10:41:22</messageDateTime>
+        <senderId>2</senderId>
+        <body>My computer won't boot and I want to return it.</body>
+      </message>
+      <message>
+        <messageDateTime>2021-01-06T15:32:14</messageDateTime>
+        <senderId>1</senderId>
+        <body>We will review your file and contact you shortly.</body>
+      </message>
+      <message>
+        <messageDateTime>2021-03-12T21:13:19</messageDateTime>
+        <senderId>2</senderId>
+        <body>Hi Chris, just wanted to follow up on the status of this request. Thanks.</body>
+      </message>
+      <message>
+        <messageDateTime>2021-03-12T21:14:40</messageDateTime>
+        <senderId>1</senderId>
+        <body>Hi Joe, our techs are still looking into this problem. I'll keep you posted.</body>
+      </message>
+    </messages>
+  </ticket>
+  <ticket>
+    <ticketId>2</ticketId>
+    <submitterId>3</submitterId>
+    <handlerId>1</handlerId>
+    <category>troubleshoot</category>
+    <status>resolved</status>
+    <ticketDateTimes>
+      <openedDate>2021-01-08T09:24:19</openedDate>
+      <resolvedDate>2021-01-10T08:12:15</resolvedDate>
+    </ticketDateTimes>
+    <memos>
+      <memo>
+        <memoDateTime>2021-01-08T09:24:19</memoDateTime>
+        <authorId>1</authorId>
+        <note>Issue is minor. I will email the client today.</note>
+      </memo>
+      <memo>
+        <memoDateTime>2021-01-10T08:12:15</memoDateTime>
+        <authorId>1</authorId>
+        <note>Issue has been resolved.</note>
+      </memo>
+    </memos>
+    <messages>
+      <message>
+        <messageDateTime>2021-01-08T11:10:45</messageDateTime>
+        <senderId>3</senderId>
+        <body>My computer has no sound.</body>
+      </message>
+      <message>
+        <messageDateTime>2021-01-09T08:05:55</messageDateTime>
+        <senderId>1</senderId>
+        <body>Try plugging in your speakers.</body>
+      </message>
+      <message>
+        <messageDateTime>2021-01-10T04:54:35</messageDateTime>
+        <senderId>3</senderId>
+        <body>I tried that, it works now!</body>
+      </message>
+      <message>
+        <messageDateTime>2021-03-11T22:25:59</messageDateTime>
+        <senderId>1</senderId>
+        <body>Great! Thanks for choosing BlitzTech.</body>
+      </message>
+    </messages>
+  </ticket>
+  <ticket>
+    <ticketId>3</ticketId>
+    <submitterId>3</submitterId>
+    <handlerId>1</handlerId>
+    <category>troubleshoot</category>
+    <status>open</status>
+    <ticketDateTimes>
+      <openedDate>2021-02-15T07:15:29</openedDate>
+    </ticketDateTimes>
+    <memos>
+      <memo>
+        <memoDateTime>2021-02-15T09:30:27</memoDateTime>
+        <authorId>1</authorId>
+        <note>Will contact client for more info.</note>
+      </memo>
+    </memos>
+    <messages>
+      <message>
+        <messageDateTime>2021-02-15T09:30:27</messageDateTime>
+        <senderId>3</senderId>
+        <body>My computer fans are making strange noises.</body>
+      </message>
+      <message>
+        <messageDateTime>2021-02-16T15:45:57</messageDateTime>
+        <senderId>1</senderId>
+        <body>Can you describe the noise?</body>
+      </message>
+    </messages>
+  </ticket>
+  <ticket>
+    <ticketId>4</ticketId>
+    <submitterId>2</submitterId>
+    <handlerId>1</handlerId>
+    <category>inquiry</category>
+    <status>resolved</status>
+    <ticketDateTimes>
+      <openedDate>2021-03-12T21:17:47</openedDate>
+      <resolvedDate>2021-03-12T21:21:26</resolvedDate>
+    </ticketDateTimes>
+    <memos>
+      <memo>
+        <memoDateTime>2021-03-12T21:20:05</memoDateTime>
+        <authorId>1</authorId>
+        <note>Gillian from sales says we don't sell software separately.</note>
+      </memo>
+    </memos>
+    <messages>
+      <message>
+        <messageDateTime>2021-03-12T21:17:47</messageDateTime>
+        <senderId>2</senderId>
+        <body>How much would it cost to upgrade to the latest version of MS Office?</body>
+      </message>
+      <message>
+        <messageDateTime>2021-03-12T21:21:05</messageDateTime>
+        <senderId>1</senderId>
+        <body>Sorry Joe, we only sell software bundled with the computer.</body>
+      </message>
+    </messages>
+  </ticket>
+</tickets>
